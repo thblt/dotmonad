@@ -1,0 +1,36 @@
+cabal-version:      2.4
+name:               dotmonad
+version:            0.1.0.0
+synopsis:   Yet another Dotfiles manager
+description:
+            DotMonad is a simple dsl for managing dotfiles, that compiles to a
+            command-line program that (guess what) manages your dotfiles.  It
+            supports simple, renamed and cherrypicked dotfiles, conditionals,
+            safety checks, dry run and cleanup functions.
+
+license:            GPL-3.0-or-later
+author:             Thibault Polge
+maintainer:         thibault@thb.lt
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files:
+                   README.md
+
+library
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    exposed-modules: DotMonad
+                   , DotMonad.Tutorial
+    build-depends:    base ^>=4.14.1.0
+                    , containers >= 0.6.2.1
+                    , data-default
+                    , aeson
+                    , lens >= 5.0.1
+                    , mtl >= 2.2.2
+                    , filepath >= 1.4.2.1
+                    , hostname >= 1.0
+                    , optparse-applicative >= 0.16.0
+    hs-source-dirs:   src
+    default-language: Haskell2010
